@@ -1,0 +1,19 @@
+<div *ngIf="showForm">
+    <div class="form-group">
+      <label>Song Name</label>
+      <input class="form-control" placeholder="Song Name" [(ngModel)] = "songName">
+    </div>
+    <div class="form-group">
+    <label>Artist Name</label>
+        <input class="form-control" placeholder="Artist Name" [(ngModel)] = "songArtist">
+      </div>
+      <div class="form-group">
+        <label>Song Url</label>
+        <input class="form-control" placeholder="Song Url" [(ngModel)] = "songUrl">
+      </div>
+      <div class="form-group">
+        <label>Song Rating</label>
+        <input class="form-control" placeholder="Song Rating" [(ngModel)] = "songRating">
+      </div>
+    <button type="submit" class="btn btn-success" (click)="onSaveButtonClick()">Save</button>
+</div>

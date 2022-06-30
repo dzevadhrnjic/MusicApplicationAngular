@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-md-4">
+        <h2>My songs</h2>
+    </div>
+    <div class="col-md-6">
+        <div class="form-group">
+        <input class="form-control" placeholder="Search Song Name" [(ngModel)] = "searchSong" (keyup)="onSearch($event)"/>
+      </div>
+    </div>
+    <div class="col-md-2">
+        <button class="btn btn-primary" (click)="onNewSongButtonClick()">Add New Song</button>
+    </div>
+</div>
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let song of songs" (click) = "onClickSongItem(song)">
+        <div class="row">
+            <div class="col-md-10">
+                <p>{{song.songname}}</p>
+            </div>
+            <div class="col-md-1">               
+                 <button (click)="onEditButtonClick(song)" class = "btn btn-primary" >Edit</button>
+            </div>                
+            <div class="col-md-1">       
+                <button (click)="onDeleteButtonClick(song.id)" class="btn btn-danger">Delete</button> 
+            </div>
+        </div>
+    </li>
+    </ul>
+
+    
